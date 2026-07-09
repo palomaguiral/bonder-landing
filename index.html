@@ -3,365 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bonder — Experiencias que te conectan</title>
-<meta name="description" content="Bonder: viajes deportivos y culturales. Practica el deporte local del destino, no lo mires desde fuera. Próximamente: Brasil y Japón.">
+<title>Bonder — Viajes que te transforman</title>
+<meta name="description" content="Bonder: viajes deportivos internacionales. Practica el deporte local del destino, no lo mires desde fuera. Próximamente: dos destinos.">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#FFFFFF;
-    --forest:#1F4635;
-    --moss:#3F6B4C;
-    --sage:#8FAE8F;
-    --sage-tint:#EEF3EC;
-    --ink:#16232B;
-    --line: rgba(31,70,53,0.18);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    font-weight:400;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.display{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    letter-spacing:-0.01em;
-    margin:0;
-    color:var(--ink);
-  }
-  .eyebrow{
-    font-family:'Inter', sans-serif;
-    font-size:0.75rem;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    font-weight:600;
-    color:var(--moss);
-  }
-  section{
-    padding:6rem 1.5rem;
-  }
-  .wrap{
-    max-width:1120px;
-    margin:0 auto;
-  }
-  a{color:inherit;}
-
-  /* NAV */
-  header.nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{
-    max-width:1120px;
-    margin:0 auto;
-    padding:1rem 1.5rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-  .nav-logo img{
-    height:30px;
-    width:auto;
-  }
-  .nav-links{
-    display:flex;
-    align-items:center;
-    gap:1.6rem;
-    font-size:0.9rem;
-  }
-  .nav-links a{
-    color:var(--ink);
-    text-decoration:none;
-    transition:color .2s ease;
-  }
-  .nav-links a:hover, .nav-links a:focus-visible{color:var(--forest);}
-  .nav-cta{
-    border:1px solid var(--forest);
-    padding:0.5rem 1.1rem;
-    border-radius:100px;
-    font-size:0.85rem;
-    color:var(--forest)!important;
-  }
-  .nav-cta:hover{background:var(--forest); color:#fff!important;}
-
-  /* HERO */
-  .hero{
-    padding:5.5rem 1.5rem 3.5rem;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero-bg{
-    position:absolute;
-    inset:0;
-    z-index:0;
-    overflow:hidden;
-  }
-  .hero-bg video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:1;
-  }
-  .hero-bg svg{
-    position:absolute;
-    top:0; left:0;
-    width:160%;
-    height:100%;
-  }
-  .hero-bg .band{
-    fill:none;
-    stroke-width:2;
-  }
-  .band-1{ stroke:var(--sage); opacity:0.35; animation: drift 34s linear infinite; }
-  .band-2{ stroke:var(--forest); opacity:0.16; animation: drift 46s linear infinite reverse; }
-  .band-3{ stroke:var(--moss); opacity:0.22; animation: drift 60s linear infinite; }
-  @keyframes drift{
-    0%{ transform:translateX(0); }
-    100%{ transform:translateX(-33.333%); }
-  }
-  .hero-bg::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg, rgba(15,35,28,0.42) 0%, rgba(15,35,28,0.5) 55%, rgba(255,255,255,0.96) 96%, #fff 100%);
-  }
-  .hero-inner{
-    max-width:820px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    position:relative;
-    z-index:1;
-  }
-  .hero h1{
-    font-size:clamp(2.1rem, 5vw, 3.4rem);
-    line-height:1.18;
-    max-width:24ch;
-    color:#fff;
-    text-shadow:0 2px 18px rgba(0,0,0,0.25);
-  }
-  .hero p.lede{
-    margin-top:1.6rem;
-    max-width:46ch;
-    font-size:1.15rem;
-    color:rgba(255,255,255,0.88);
-    text-shadow:0 1px 12px rgba(0,0,0,0.2);
-  }
-  .hero-actions{
-    margin-top:2.4rem;
-    display:flex;
-    gap:1rem;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:0.5rem;
-    padding:0.85rem 1.6rem;
-    border-radius:100px;
-    font-weight:600;
-    font-size:0.95rem;
-    text-decoration:none;
-    cursor:pointer;
-    border:none;
-    transition:transform .2s ease, background .2s ease;
-  }
-  .btn-primary{background:var(--forest); color:#fff;}
-  .btn-primary:hover{transform:translateY(-2px); background:#173627;}
-  .btn-ghost{background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.7);}
-  .btn-ghost:hover{background:rgba(255,255,255,0.12);}
-
-  /* CONCEPT */
-  .concept-head{
-    max-width:640px;
-    margin-bottom:3rem;
-  }
-  .concept-head h2{
-    font-size:clamp(1.9rem, 3.5vw, 2.6rem);
-    margin-top:0.6rem;
-  }
-  .pillars{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:2rem;
-  }
-  .pillar{
-    border-top:2px solid var(--forest);
-    padding-top:1.2rem;
-  }
-  .pillar h3{
-    font-size:1.2rem;
-    margin-bottom:0.6rem;
-    color:var(--forest);
-  }
-  .pillar p{
-    font-size:0.95rem;
-    color:#41504a;
-    margin:0;
-  }
-
-  /* DESTINATIONS */
-  .destinations{
-    background:var(--sage-tint);
-  }
-  .dest-head{max-width:640px; margin-bottom:3rem;}
-  .dest-head h2{font-size:clamp(1.9rem, 3.5vw, 2.6rem); margin-top:0.6rem;}
-  .dest-head p{color:#41504a; margin-top:1rem; font-size:1.05rem;}
-  .dest-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1.75rem;
-  }
-  .dest-card{
-    border:1px dashed var(--forest);
-    border-radius:18px;
-    padding:2.6rem 2rem;
-    position:relative;
-    min-height:220px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:#fff;
-    transition:background .25s ease;
-  }
-  .dest-card:hover{background:var(--sage-tint);}
-  .dest-mark{
-    font-family:'Fraunces', serif;
-    font-size:3rem;
-    color:var(--forest);
-    line-height:1;
-  }
-  .dest-card h3{
-    font-size:1.5rem;
-    margin-top:1rem;
-    color:var(--forest);
-  }
-
-  /* NAME MEANING */
-  .meaning{
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:3rem;
-    align-items:center;
-  }
-  .meaning-word{
-    font-family:'Fraunces', serif;
-    font-size:clamp(3rem, 8vw, 5.5rem);
-    color:var(--forest);
-    line-height:0.9;
-  }
-  .meaning-text h2{
-    font-size:clamp(1.7rem, 3vw, 2.2rem);
-    margin-bottom:1.1rem;
-  }
-  .meaning-text p{
-    color:#41504a;
-    font-size:1.02rem;
-    margin:0 0 1rem;
-  }
-  .meaning-text p:last-child{margin-bottom:0;}
-
-  /* FORM */
-  .form-section{
-    background:var(--sage-tint);
-  }
-  .form-head{max-width:560px; margin:0 auto 2.5rem; text-align:center;}
-  .form-head h2{font-size:clamp(1.8rem, 3.5vw, 2.4rem); margin-top:0.6rem;}
-  .form-head p{color:#41504a; margin-top:0.9rem;}
-  form.interest{
-    max-width:520px;
-    margin:0 auto;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:2.2rem;
-  }
-  .field{margin-bottom:1.3rem;}
-  .field label{
-    display:block;
-    font-size:0.85rem;
-    margin-bottom:0.4rem;
-    color:var(--moss);
-  }
-  .field input[type=text], .field input[type=email]{
-    width:100%;
-    padding:0.75rem 0.9rem;
-    border-radius:10px;
-    border:1px solid rgba(31,70,53,0.25);
-    background:#fff;
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    font-size:0.95rem;
-  }
-  .field input::placeholder{color:#9AA6A0;}
-  form.interest button{
-    width:100%;
-    margin-top:0.5rem;
-    justify-content:center;
-  }
-  .form-note{
-    text-align:center;
-    font-size:0.78rem;
-    color:#7A8983;
-    margin-top:1.2rem;
-  }
-
-  /* FOOTER */
-  footer{
-    background:#fff;
-    color:#5B6B64;
-    padding:2.5rem 1.5rem;
-    font-size:0.85rem;
-    border-top:1px solid var(--line);
-  }
-  .footer-inner{
-    max-width:1120px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:1rem;
-  }
-  .footer-inner a{text-decoration:none; color:var(--forest);}
-
-  @media (max-width:820px){
-    .pillars{grid-template-columns:1fr; gap:2.2rem;}
-    .dest-grid{grid-template-columns:1fr;}
-    .meaning{grid-template-columns:1fr; gap:1.5rem; text-align:left;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .route-plane{animation:none; offset-distance:35%;}
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="nav-logo">
-      <img src="logo.png" alt="Bonder">
-    </div>
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Bonder"></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
     <nav class="nav-links">
-      <a href="#destinos">Destinos</a>
-      <a href="#historia">El nombre</a>
-      <a href="https://instagram.com/bondertravel" target="_blank" rel="noopener">Instagram</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="como-trabajamos.html">¿Cómo trabajamos?</a>
+      <a href="nosotros.html">¿Quiénes somos?</a>
+      <a href="contacto.html">Contacto</a>
       <a class="nav-cta" href="#interes">Quiero más información</a>
     </nav>
   </div>
@@ -372,22 +32,14 @@
     <video autoplay muted loop playsinline>
       <source src="hero.mp4" type="video/mp4">
     </video>
-    <!-- Líneas verdes de reserva, por si el vídeo no carga. Si quieres quitarlas del todo, borra este <svg>.
-    <svg viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path class="band band-1" d="M0,120 C 200,40 400,200 600,120 S 1000,40 1200,120 S 1500,180 1600,120 L 1600,140 C 1500,200 1300,100 1200,140 S 1000,60 600,140 S 200,60 0,140 Z"/>
-      <path class="band band-2" d="M0,260 C 220,180 420,340 640,260 S 1040,180 1260,260 S 1500,320 1600,260"/>
-      <path class="band band-3" d="M0,380 C 240,320 460,440 680,380 S 1060,320 1280,380 S 1500,420 1600,380"/>
-    </svg>
-    -->
   </div>
   <div class="hero-inner">
     <h1>El mejor recuerdo no siempre se visita. A veces se practica.</h1>
     <p class="lede">Bonder diseña viajes donde no miras el deporte local del país que visitas — lo practicas. Cultura, deporte e instructores nativos, en un mismo itinerario.</p>
     <div class="hero-actions">
       <a href="#interes" class="btn btn-primary">Avísame cuando esté disponible</a>
-      <a href="#destinos" class="btn btn-ghost">Ver próximos destinos</a>
+      <a href="destinos.html" class="btn btn-ghost">Ver destinos</a>
     </div>
-
   </div>
 </section>
 
@@ -399,14 +51,23 @@
     </div>
     <div class="pillars">
       <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>
+        </div>
         <h3>Cultura completa</h3>
         <p>Los destinos y monumentos imprescindibles del país, bien seleccionados y priorizados — sin prisa ni masificación.</p>
       </div>
       <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2Z"/></svg>
+        </div>
         <h3>Deporte local</h3>
         <p>No una excursión puntual: el deporte autóctono del destino, practicado varios días con un instructor nativo, como hilo conductor del viaje.</p>
       </div>
       <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.65-7 10-7 10-2.5-4-4.5-5-4.5-5"/></svg>
+        </div>
         <h3>Vida saludable</h3>
         <p>Alojamiento pensado para recuperarte, gastronomía healthy y un ritmo de viaje que respeta tu carga física día a día.</p>
       </div>
@@ -414,12 +75,11 @@
   </div>
 </section>
 
-<section class="destinations" id="destinos">
+<section>
   <div class="wrap">
-    <div class="dest-head">
+    <div class="concept-head">
       <span class="eyebrow">Próximos destinos</span>
       <h2>Empezamos por dos países</h2>
-      <p>Los dos primeros destinos de Bonder se están terminando de diseñar — pronto sabrás cuáles son.</p>
     </div>
     <div class="dest-grid">
       <div class="dest-card">
@@ -430,17 +90,6 @@
         <span class="dest-mark">?</span>
         <h3>Próximo destino</h3>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="name-meaning" id="historia">
-  <div class="wrap meaning">
-    <div class="meaning-word">bonder</div>
-    <div class="meaning-text">
-      <h2>De dónde viene el nombre</h2>
-      <p>Bonder nace de la unión de dos palabras: <strong>Bōken</strong> (冒険), "aventura" en japonés, y <strong>Sonder</strong>, ese término del diccionario de las emociones raras que describe la certeza repentina de que cada persona que cruzas vive una vida tan intensa y completa como la tuya.</p>
-      <p>Aventura y esa mirada hacia el otro son, para nosotros, las dos caras de viajar practicando el deporte de un lugar junto a su gente.</p>
     </div>
   </div>
 </section>
@@ -460,18 +109,21 @@
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="tu@email.com" required>
     </div>
-    <input type="hidden" name="interest" value="destinos">
     <button type="submit" class="btn btn-primary">Avísame cuando los destinos estén disponibles</button>
   </form>
+  <div class="form-success">
+    <strong>¡Gracias!</strong> Te avisaremos en cuanto abramos plazas.
+  </div>
   <p class="form-note">Este formulario es un maquetado provisional — conéctalo a tu proveedor de email (Mailchimp, Brevo, un Google Form, etc.) antes de publicar.</p>
 </section>
 
 <footer>
   <div class="footer-inner">
-    <span>© 2026 Bonder. Experiencias que te conectan.</span>
+    <span>© 2026 Bonder. Viajes que te transforman.</span>
     <a href="https://instagram.com/bondertravel" target="_blank" rel="noopener">@bondertravel</a>
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
