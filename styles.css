@@ -226,7 +226,7 @@ header.nav{
 .dest-card{
   border:1px dashed var(--navy);
   border-radius:18px;
-  padding:2.8rem 2rem;
+  padding:2.2rem 2rem;
   min-height:220px;
   display:flex;
   flex-direction:column;
@@ -237,16 +237,27 @@ header.nav{
   transition:background .25s ease;
 }
 .dest-card:hover{background:var(--sage-tint);}
-.dest-mark{
-  font-family:'Poppins', sans-serif;
-  font-weight:600;
-  font-size:2.6rem;
-  color:var(--sage-deep);
-  line-height:1;
+.dest-flag{font-size:2.4rem; line-height:1;}
+.dest-flag-icon{
+  width:52px;
+  height:36px;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 0 0 1px rgba(13,27,42,0.12);
 }
-.dest-card h3{
-  font-size:1.4rem;
-  margin-top:1rem;
+.dest-flag-icon svg{width:100%; height:100%; display:block;}
+.dest-card h3{font-size:1.5rem; margin-top:0.8rem;}
+.dest-tagline{color:var(--text-muted); font-size:0.95rem; margin-top:0.5rem; max-width:28ch;}
+.dest-status{
+  margin-top:1.1rem;
+  font-size:0.75rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--sage-deep);
+  background:var(--sage-tint);
+  padding:0.35rem 0.9rem;
+  border-radius:100px;
 }
 
 /* ===== STEPS (cómo trabajamos) ===== */
@@ -429,6 +440,54 @@ form.interest button{width:100%; margin-top:0.5rem;}
   flex-wrap:wrap;
   justify-content:center;
 }
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:0.45rem;
+  margin-top:1.3rem;
+  color:#fff;
+  font-size:0.85rem;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  text-shadow:0 1px 10px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.6);
+}
+.hero-badge::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--sage);
+  flex-shrink:0;
+}
+
+/* ===== PHOTO PLACEHOLDERS ===== */
+.photo-slot{
+  border:1px dashed rgba(13,27,42,0.4);
+  border-radius:18px;
+  background:var(--sand-tint);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--text-muted);
+  font-size:0.85rem;
+  padding:1.5rem;
+}
+.photo-slot span{max-width:240px;}
+.photo-slot.wide{aspect-ratio:21/8;}
+.photo-slot.card{aspect-ratio:4/3; margin-bottom:1.1rem;}
+.photo-slot.portrait{aspect-ratio:4/5; max-width:320px; margin:0 auto 2rem;}
+
+/* ===== CALLOUT ===== */
+.callout{
+  background:var(--sage-tint);
+  border-radius:16px;
+  padding:1.8rem 2rem;
+  margin-top:0.75rem;
+}
+.callout h3{margin-bottom:0.5rem; font-size:1.05rem;}
+.callout p{color:var(--text-muted); font-size:0.95rem; margin-bottom:1.1rem;}
 
 /* ===== CONCEPT (pilares en portada) ===== */
 .concept-head{max-width:640px; margin-bottom:3rem;}
