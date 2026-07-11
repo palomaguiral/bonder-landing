@@ -463,18 +463,10 @@ form.interest button{width:100%; margin-top:0.5rem;}
 
 /* ===== PHOTO PLACEHOLDERS ===== */
 .photo-slot{
-  border:1px dashed rgba(13,27,42,0.4);
   border-radius:18px;
-  background:var(--sand-tint);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:var(--text-muted);
-  font-size:0.85rem;
-  padding:1.5rem;
+  display:block;
+  width:100%;
 }
-.photo-slot span{max-width:240px;}
 .photo-slot.wide{aspect-ratio:21/8;}
 .photo-slot.card{aspect-ratio:4/3; margin-bottom:1.1rem;}
 .photo-slot.portrait{aspect-ratio:4/5; max-width:320px; margin:0 auto 2rem;}
