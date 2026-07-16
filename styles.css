@@ -10,7 +10,7 @@
   --text:#0D1B2A;
   --text-muted:#4A5560;
   --line: rgba(13,27,42,0.12);
-  --nav-h: 76px;
+  --nav-h: 92px;
 }
 
 *{box-sizing:border-box;}
@@ -64,7 +64,7 @@ header.nav{
   align-items:center;
   justify-content:space-between;
 }
-.nav-logo img{height:46px; width:auto;}
+.nav-logo img{height:64px; width:auto;}
 .nav-links{
   display:flex;
   align-items:center;
