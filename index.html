@@ -43,6 +43,10 @@
       <a href="/destinos/" class="btn btn-ghost">Ver destinos</a>
     </div>
   </div>
+  <div class="scroll-hint">
+    <span>Scroll para conocer más</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
 </section>
 
 <section class="concept">
@@ -50,7 +54,7 @@
     <div class="concept-head">
       <span class="eyebrow">Cómo viajamos</span>
       <h2>Tres pilares, un mismo viaje</h2>
-      <p style="color:var(--text-muted); margin-top:1rem; font-size:1.02rem;">Un viaje Bonder no es un campus deportivo ni un tour de monumentos: es un itinerario completo — ciudades, historia, gastronomía — en el que, varios días, entrenas el deporte local con instructores nativos, en lugares reales.</p>
+      <p>Un viaje Bonder no es un campus deportivo ni un tour de monumentos: es un itinerario completo — ciudades, historia, gastronomía — en el que, varios días, entrenas el deporte local con instructores nativos, en lugares reales.</p>
     </div>
     <div class="pillars">
       <div class="pillar">
@@ -76,7 +80,13 @@
       </div>
     </div>
 
-    <img src="/images/grupo-entrenando.jpg" alt="Viajeros entrenando junto a un instructor local" class="photo-slot wide" style="margin-top:3rem; object-fit:cover;">
+    <!-- Carrusel: añade aquí más fotos de personas viviendo el viaje cuando las tengáis -->
+    <div class="photo-carousel">
+      <img src="/images/grupo-entrenando.jpg" alt="Viajeros entrenando junto a un instructor local">
+      <img src="/images/destino-brasil.jpg" alt="Brasil">
+      <img src="/images/destino-japon.jpg" alt="Japón">
+      <img src="/images/nosotras.jpg" alt="Las fundadoras de Bonder">
+    </div>
   </div>
 </section>
 
@@ -87,17 +97,23 @@
       <h2>Empezamos por dos países</h2>
     </div>
     <div class="dest-grid">
-      <div class="dest-card dest-card--photo" style="--bg-img:url('images/destino-brasil.jpg');">
-        <span class="dest-flag-icon"><svg viewBox="0 0 30 21" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="21" fill="#009C3B"/><polygon points="15,2 28,10.5 15,19 2,10.5" fill="#FFDF00"/><circle cx="15" cy="10.5" r="5.2" fill="#002776"/></svg></span>
-        <h3>Brasil</h3>
-        <p class="dest-tagline">Capoeira en el lugar donde nació</p>
-        <span class="dest-status">Lo estamos diseñando</span>
+      <div class="dest-card">
+        <div class="dest-card-media" style="background-image:url('/images/destino-brasil.jpg');">
+          <span class="dest-card-badge">Lo estamos diseñando</span>
+        </div>
+        <div class="dest-card-body">
+          <h3><span class="dest-flag-icon"><svg viewBox="0 0 30 21" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="21" fill="#009C3B"/><polygon points="15,2 28,10.5 15,19 2,10.5" fill="#FFDF00"/><circle cx="15" cy="10.5" r="5.2" fill="#002776"/></svg></span>Brasil</h3>
+          <p class="dest-tagline">Capoeira en el lugar donde nació</p>
+        </div>
       </div>
-      <div class="dest-card dest-card--photo" style="--bg-img:url('images/destino-japon.jpg');">
-        <span class="dest-flag-icon"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#ffffff"/><circle cx="15" cy="10" r="6" fill="#BC002D"/></svg></span>
-        <h3>Japón</h3>
-        <p class="dest-tagline">Sumo y judo</p>
-        <span class="dest-status">Lo estamos diseñando</span>
+      <div class="dest-card">
+        <div class="dest-card-media" style="background-image:url('/images/destino-japon.jpg');">
+          <span class="dest-card-badge">Lo estamos diseñando</span>
+        </div>
+        <div class="dest-card-body">
+          <h3><span class="dest-flag-icon"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#ffffff"/><circle cx="15" cy="10" r="6" fill="#BC002D"/></svg></span>Japón</h3>
+          <p class="dest-tagline">Sumo y judo</p>
+        </div>
       </div>
     </div>
   </div>
